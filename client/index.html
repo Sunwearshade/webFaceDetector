@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePills Face Recognition</title>
+    <script src="./public/js/face-api.min.js"></script>
+    <script src="./public/js/register.js" defer></script>
+    <script src="./public/js/gallery.js" defer></script>
+    <script src="./public/js/unknown_faces.js" defer></script>
+    <style>
+        body {
+            text-align: center;
+            background: #f2f6f8;
+            font-family: Arial, sans-serif;
+        }
+        #video {
+            width: 400px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .section {
+            margin: 20px;
+            padding: 15px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        img {
+            width: 100px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Reconocimiento Facial</h1>
+
+    <!-- Sección de Registro -->
+    <div class="section">
+        <h2>Registrar Rostro</h2>
+        <video id="video" autoplay></video>
+        <br>
+        <input type="text" id="name" placeholder="Nombre del usuario">
+        <button id="capture">Registrar</button>
+    </div>
+
+    <!-- Sección de Consulta de Rostros No Identificados -->
+    <div class="section">
+        <h2>Rostros No Identificados</h2>
+        <div id="unknown-list"></div>
+    </div>
+
+    <!-- Galería de Rostros Registrados -->
+    <div class="section">
+        <h2>Rostros Registrados</h2>
+        <div id="gallery"></div>
+    </div>
+
+</body>
+</html>
